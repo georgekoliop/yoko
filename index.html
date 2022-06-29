@@ -51,10 +51,15 @@ https://templatemo.com/tm-571-hexashop
             appId: 'my-app-id'
         })
 
+        snowplow('enableActivityTracking', {
+          minimumVisitLength: 5,
+          heartbeatDelay: 10
+        });
+
         snowplow('trackPageView');
 
         snowplow('enableLinkClickTracking');
-        
+
     </script>
 </head>
 
