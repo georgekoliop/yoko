@@ -57,7 +57,7 @@ https://templatemo.com/tm-571-hexashop
         });
 
         snowplow('trackPageView');
-
+        snowplow('enableFormTracking');
         snowplow('enableLinkClickTracking');
 
     </script>
@@ -758,6 +758,7 @@ https://templatemo.com/tm-571-hexashop
                     <form id="subscribe" action="" method="get">
                         <div class="row">
                             <div class="col-lg-5">
+                              <a href="#" target="_blank" id="simpleLink1">It's a simple link</a>
                                 <fieldset>
                                     <input name="name" type="text" id="name" placeholder="Your Name" required="">
                                 </fieldset>
