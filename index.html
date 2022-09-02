@@ -53,6 +53,15 @@ https://templatemo.com/tm-571-hexashop
         performanceTiming: true // this captures performance metrics like load times
       }
     });
+    snowplow("newTracker", "sp", "https://com-snowplowanalytics-dev1.mini.snplow.net", {
+      appId: "hosted-snowplow", // you can specify your own app name here
+      platform: "web",
+      forceSecureTracker: true,
+      contexts: {
+        webPage: true, // this sets a unique id for each page view
+        performanceTiming: true // this captures performance metrics like load times
+      }
+    });
     
     // send first heartbeat after 10 seconds, and every 10 seconds thereafter
     snowplow("enableActivityTracking", { minimumVisitLength: 10, heartbeatDelay: 10 });
