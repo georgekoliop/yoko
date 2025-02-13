@@ -66,6 +66,13 @@ https://templatemo.com/tm-571-hexashop
     snowplow("enableActivityTracking", { minimumVisitLength: 10, heartbeatDelay: 10 });
     snowplow("enableLinkClickTracking"); 
     snowplow("trackPageView");
+
+    window.snowplow('addPlugin',
+  "https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-form-tracking@latest/dist/index.umd.min.js",
+  ["snowplowFormTracking", "FormTrackingPlugin"]
+);
+
+    snowplow('enableFormTracking');
     </script>
 </head>
 
