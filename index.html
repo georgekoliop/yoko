@@ -72,7 +72,15 @@ https://templatemo.com/tm-571-hexashop
   ["snowplowFormTracking", "FormTrackingPlugin"]
 );
 
-    snowplow('enableFormTracking');
+    var opts = {
+  forms: {
+    filter: function (elt) {
+      return elt.id !== "subscribe";
+    }
+  }
+};
+
+    snowplow('enableFormTracking', { options: opts });
     </script>
 </head>
 
