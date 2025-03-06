@@ -64,7 +64,7 @@ https://templatemo.com/tm-571-hexashop
     
     // send first heartbeat after 10 seconds, and every 10 seconds thereafter
     snowplow("enableActivityTracking", { minimumVisitLength: 10, heartbeatDelay: 10 });
-    snowplow("enableLinkClickTracking"); 
+    snowplow('enableLinkClickTracking', { trackContent: true });
     snowplow("trackPageView");
 
     window.snowplow('addPlugin',
@@ -854,7 +854,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h4>Useful Links</h4>
                     <ul>
                         <li><a href="#">Homepage</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a id="about_us" href="about.html">About Us</a></li>
                         <li><a href="#">Help</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
