@@ -71,6 +71,11 @@ https://templatemo.com/tm-571-hexashop
   "https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-form-tracking@latest/dist/index.umd.min.js",
   ["snowplowFormTracking", "FormTrackingPlugin"]
 );
+    window.snowplow('addPlugin', 
+  "https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-geolocation@latest/dist/index.umd.min.js",
+  ["snowplowGeolocation", "GeolocationtPlugin"],
+  [false] // Enable at load
+);
 
     var opts = {
   forms: {
